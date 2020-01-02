@@ -23,4 +23,10 @@ public class FireScript : MonoBehaviour
         // Destroy the bullet 
         Destroy(gameObject);
     }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.CompareTag("Water"))
+            Destroy(gameObject);
+    } 
 }

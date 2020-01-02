@@ -26,7 +26,13 @@ public class MouseScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.CompareTag("Player"))
+        if (coll.gameObject.CompareTag("Fire"))
+        {
             Destroy(gameObject);
+        }
+        else if (coll.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

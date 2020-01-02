@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a7765a9646f974fa19e54409f76d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire: {fileID: 9199329045033696582, guid: db15c2105951c5143859cb733a40dce0, type: 3}
+  fire: {fileID: 1514382283143624072, guid: db15c2105951c5143859cb733a40dce0, type: 3}
   maxSpeed: 5
 --- !u!61 &7615059404095021498
 BoxCollider2D:
