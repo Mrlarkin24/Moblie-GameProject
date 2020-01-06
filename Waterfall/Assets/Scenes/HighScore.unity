@@ -823,8 +823,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 20, y: -253}
-  m_SizeDelta: {x: 240, y: 70}
+  m_AnchoredPosition: {x: -24.299988, y: -253}
+  m_SizeDelta: {x: 328.6, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171979091
 MonoBehaviour:
@@ -900,8 +900,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 20, y: -184}
-  m_SizeDelta: {x: 240, y: 68}
+  m_AnchoredPosition: {x: -24.299988, y: -184}
+  m_SizeDelta: {x: 328.6, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264610583
 MonoBehaviour:
@@ -1331,8 +1331,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 20, y: -321.5}
-  m_SizeDelta: {x: 240, y: 67}
+  m_AnchoredPosition: {x: -24.3, y: -321.5}
+  m_SizeDelta: {x: 328.6, y: 67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1616542799
 MonoBehaviour:
@@ -1408,8 +1408,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 20, y: -390}
-  m_SizeDelta: {x: 240, y: 70}
+  m_AnchoredPosition: {x: -24.299988, y: -390}
+  m_SizeDelta: {x: 328.6, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1641139755
 MonoBehaviour:
@@ -1620,8 +1620,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 20, y: -455.88}
-  m_SizeDelta: {x: 240, y: 61.75}
+  m_AnchoredPosition: {x: -24.299988, y: -455.88}
+  m_SizeDelta: {x: 328.6, y: 61.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1964078651
 MonoBehaviour:
@@ -1764,6 +1764,56 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scoreman
       objectReference: {fileID: 0}
+    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
+        type: 3}
+      propertyPath: hScore1
+      value: 
+      objectReference: {fileID: 130975997}
+    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
+        type: 3}
+      propertyPath: hScore2
+      value: 
+      objectReference: {fileID: 230060012}
+    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
+        type: 3}
+      propertyPath: hScore3
+      value: 
+      objectReference: {fileID: 275007574}
+    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
+        type: 3}
+      propertyPath: hScore4
+      value: 
+      objectReference: {fileID: 831636224}
+    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
+        type: 3}
+      propertyPath: hScore5
+      value: 
+      objectReference: {fileID: 1144990868}
+    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
+        type: 3}
+      propertyPath: nScore1
+      value: 
+      objectReference: {fileID: 1264610583}
+    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
+        type: 3}
+      propertyPath: nScore2
+      value: 
+      objectReference: {fileID: 1171979091}
+    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
+        type: 3}
+      propertyPath: nScore3
+      value: 
+      objectReference: {fileID: 1616542799}
+    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
+        type: 3}
+      propertyPath: nScore4
+      value: 
+      objectReference: {fileID: 1641139755}
+    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
+        type: 3}
+      propertyPath: nScore5
+      value: 
+      objectReference: {fileID: 1964078651}
     - target: {fileID: 4332677564510047247, guid: fdf182433174408428658792e2b6f996,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1819,55 +1869,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
-        type: 3}
-      propertyPath: hScore1
-      value: 
-      objectReference: {fileID: 130975997}
-    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
-        type: 3}
-      propertyPath: hScore2
-      value: 
-      objectReference: {fileID: 230060012}
-    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
-        type: 3}
-      propertyPath: hScore3
-      value: 
-      objectReference: {fileID: 275007574}
-    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
-        type: 3}
-      propertyPath: hScore4
-      value: 
-      objectReference: {fileID: 831636224}
-    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
-        type: 3}
-      propertyPath: hScore5
-      value: 
-      objectReference: {fileID: 1144990868}
-    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
-        type: 3}
-      propertyPath: nScore1
-      value: 
-      objectReference: {fileID: 1264610583}
-    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
-        type: 3}
-      propertyPath: nScore2
-      value: 
-      objectReference: {fileID: 1171979091}
-    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
-        type: 3}
-      propertyPath: nScore3
-      value: 
-      objectReference: {fileID: 1616542799}
-    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
-        type: 3}
-      propertyPath: nScore4
-      value: 
-      objectReference: {fileID: 1641139755}
-    - target: {fileID: 5384295118688797863, guid: fdf182433174408428658792e2b6f996,
-        type: 3}
-      propertyPath: nScore5
-      value: 
-      objectReference: {fileID: 1964078651}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdf182433174408428658792e2b6f996, type: 3}

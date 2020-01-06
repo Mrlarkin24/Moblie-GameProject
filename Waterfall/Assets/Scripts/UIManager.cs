@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     public int pubScore;
     public Text Firetext, Timetext, Mousetext, Powertext, Scoretext, HighName;
 
+    int i = 0;
     bool gameOn, gameOver;
     static int level = 0;
     float timeLeft = 60.0f, score = 0;
@@ -87,6 +88,11 @@ public class UIManager : MonoBehaviour
                 {
                     LoadLevel("MainScene3");
                     level = 2;
+                }
+                else if (Application.loadedLevelName == "MainScene3")
+                {
+                    playerController.alive = false;
+                    Time.timeScale = 0;
                 }
             }
 
@@ -189,6 +195,8 @@ public class UIManager : MonoBehaviour
 
     public void Score()
     {
+        Debug.Log(level);
+        Debug.Log(61 - timeLeft);
         score = 7 * (61 - timeLeft) + (level * 60);
         pubScore = ((int)score);
     }
@@ -196,11 +204,20 @@ public class UIManager : MonoBehaviour
     //Sends New Highscore and name when called
     public void EnterName()
     {
-       //Checks if entered name is empty
-       if (HighName.text != string.Empty)
+        //Stops player from entering their score more than once 
+        if (i == 0)
         {
-            //Debug.Log(HighName.text);
-            ScoreChecker.StoreHighscore(pubScore, HighName.text);
+            if (HighName.text != string.Empty) //Checks if entered name is empty
+            {
+                //Debug.Log(HighName.text);
+                ScoreChecker.StoreHighscore(pubScore, HighName.text);
+                i++;
+            }
         }
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
