@@ -6,32 +6,32 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     CatScript playerController;
+    public HighScore ScoreChecker;
 
     GameObject[] pauseObjects;
+    GameObject[] highObjects;
     GameObject[] endObjects;
 
     public int pubScore;
-    public Text Firetext;
-    public Text Timetext;
-    public Text Mousetext;
-    public Text Powertext;
-    public Text Scoretext;
+    public Text Firetext, Timetext, Mousetext, Powertext, Scoretext, HighName;
 
-    bool gameOn;
+    bool gameOn, gameOver;
     static int level = 0;
     float timeLeft = 60.0f, score = 0;
 
     // Use this for initialization
     void Start()
     {
-
         gameOn = false;
         Time.timeScale = 1;
 
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
+        highObjects = GameObject.FindGameObjectsWithTag("ShowOnHigh");
         endObjects = GameObject.FindGameObjectsWithTag("ShowOnEnd");
+        
 
         hidePaused();
+        hideHigh();
         hideEnd();
 
         //Checks to make sure one of the main scenes are loaded
@@ -39,6 +39,7 @@ public class UIManager : MonoBehaviour
         {
             playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<CatScript>();
             gameOn = true;
+            gameOver = true;
         }
     }
 
@@ -47,7 +48,7 @@ public class UIManager : MonoBehaviour
     {
 
         //uses the p button to pause and unpause the game
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) && gameOver)
         {
             if (Time.timeScale == 1)
             {
@@ -92,8 +93,15 @@ public class UIManager : MonoBehaviour
             //Checks if player has died
             if (playerController.alive == false)
             {
+                gameOver = false;
                 Score();
                 showEnd();
+                
+                // Checks if players score is a new highscore 
+                if (ScoreChecker.Checker(pubScore))
+                {
+                    showHigh();
+                }
             }
         }
     }
@@ -155,15 +163,44 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    //shows objects with ShowOnHigh tag
+    public void showHigh()
+    {
+        foreach (GameObject g in highObjects)
+        {
+            g.SetActive(true);
+        }
+    }
+
+    //hides objects with ShowOnHigh tag
+    public void hideHigh()
+    {
+        foreach (GameObject g in highObjects)
+        {
+            g.SetActive(false);
+        }
+    }
+
     //loads inputted level
     public void LoadLevel(string level)
     {
         Application.LoadLevel(level);
     }
+
     public void Score()
     {
         score = 7 * (61 - timeLeft) + (level * 60);
         pubScore = ((int)score);
     }
 
+    //Sends New Highscore and name when called
+    public void EnterName()
+    {
+       //Checks if entered name is empty
+       if (HighName.text != string.Empty)
+        {
+            //Debug.Log(HighName.text);
+            ScoreChecker.StoreHighscore(pubScore, HighName.text);
+        }
+    }
 }
